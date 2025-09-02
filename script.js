@@ -20,4 +20,37 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 const km = parseFloat(prompt("Quanti chilometri vuoi percorrere?"));
 console.log(km);
 
+//calcolo il prezzo del biglietto
+const ticketPrice = km * 0.21;
+console.log(ticketPrice);
+
+//chiedere l'età del passeggiero
+const age = parseInt(prompt("Quanti anni hai"));
+console.log(age);
+
+
+//dichiaro variabile discount=0 
+let discount = 0;
+
+
+//determinare se è possibile applicare uno sconto
+if (age > 65) {
+  discount = ticketPrice * 0.4;
+}
+else if (age < 18) {
+  discount = ticketPrice * 0.2;
+}
+else {
+  discount = 0;
+}
+
+
+//calcolo il prezzo finale e stampa il  risultato
+const finalPrice = ticketPrice - discount;
+console.log(`Il prezzo finale è €${finalPrice.toFixed(2)}`);
+
+
+
+
+
 
